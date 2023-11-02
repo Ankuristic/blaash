@@ -63,8 +63,9 @@ function Navbar() {
         <img src="your-logo.png" alt="Logo" />
       </div>
       <div className="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
+      
+        <input type="text" placeholder='support Request'></input>
+        <input type="text" placeholder='ProductTour'></input>
       </div>
       <div className="search-box">
         <input type="text" placeholder="Search" />

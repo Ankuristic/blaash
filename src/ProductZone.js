@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Products from './components/Products';
+import styled from 'styled-components'
 
 function ProductZone(props) {
   const [data, setData] = useState([]);
@@ -27,7 +27,7 @@ function ProductZone(props) {
         const response = await axios.post(apiUrl, requestBody, { headers });
 
          setData(response.data);
-        console.log("hi",response[0].data)
+        console.log("hi",response.data[0])
         // if (response.data && response.data.Name) {
         //     setData(response.data.feeds);
         //   } else {
@@ -41,15 +41,15 @@ function ProductZone(props) {
     fetchData();
     
   }, []);
-console.log("hy",data)
+// console.log("hy",data[0])
   return (
 
     // <Products data={data}/>
    
     <div className="App">
-      <h1>Grid of Cards</h1>
+      <Product >Product PlayList </Product>
       <div className="card-grid">
-        {data.length>5? (
+        {data.length>0? (
           data.map((item, index) => (
             <div key={index} className="card">
               {/* <img src={item.thumbnailUrl} alt={item.title} /> */}
@@ -60,7 +60,7 @@ console.log("hy",data)
             </div>
           ))
         ) : (
-          <p>Loading...</p>
+          <ProductParagraph>Loading...</ProductParagraph>
         )}
       </div>
     </div>
@@ -70,8 +70,19 @@ console.log("hy",data)
 export default ProductZone;
 
 
+const Product =styled.h1`
+ Display : flex;
+ justify-content: center;
+ 
+ 
+ 
+`;
 
+const ProductParagraph=styled.p`
+Display : flex;
+ justify-content: center
 
+`
 
 
 

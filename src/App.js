@@ -20,6 +20,7 @@ const App = () => {
     <>
     <Navbar/>
     <ProductZone/>
+    {/* <Asidebar/> */}
       <BrowserRouter>
       <SideBar>
         <Routes>
