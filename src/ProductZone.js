@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import './ProductZone.css';
 
 function ProductZone(props) {
   const [data, setData] = useState([]);
@@ -26,13 +27,8 @@ function ProductZone(props) {
 
         const response = await axios.post(apiUrl, requestBody, { headers });
 
-         setData(response.data);
-        console.log("hi",response.data[0])
-        // if (response.data && response.data.Name) {
-        //     setData(response.data.feeds);
-        //   } else {
-        //     console.error('API response is missing expected data structure');
-        //   }
+         setData(response.data.data);
+        console.log("hi",response.data.data)
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -46,21 +42,26 @@ function ProductZone(props) {
 
     // <Products data={data}/>
    
-    <div className="App">
-      <Product >Product PlayList </Product>
-      <div className="card-grid">
+    <div className="">
+      <div  className='cards'>Product PlayList </div>
+      <div className="card">
         {data.length>0? (
           data.map((item, index) => (
             <div key={index} className="card">
-              {/* <img src={item.thumbnailUrl} alt={item.title} /> */}
-              <div>{item[0].Name} </div>
-              <div> {item[0].PlayListId} </div>
-             
-              
-            </div>
+             <img src='../public/image/image' alt ="Product Image"/> 
+              <div className="card-info">
+      {/* <span className="card-category">{props.cat}</span> */}
+            <h3 className="card-title">Name : {item.Name}</h3>
+            <h3 className="card-title">Post_Ids:{item.Post_Ids}</h3>
+
+            {/* <a href={props.link}>
+              <button>watch now</button>
+            </a> */}
+    </div>
+             </div>
           ))
         ) : (
-          <ProductParagraph>Loading...</ProductParagraph>
+          <p>Loading...</p>
         )}
       </div>
     </div>
@@ -70,19 +71,19 @@ function ProductZone(props) {
 export default ProductZone;
 
 
-const Product =styled.h1`
- Display : flex;
- justify-content: center;
+// const Product =styled.h1`
+//  Display : flex;
+//  justify-content: center;
  
  
  
-`;
+// `;
 
-const ProductParagraph=styled.p`
-Display : flex;
- justify-content: center
+// const ProductParagraph=styled.p`
+// Display : flex;
+//  justify-content: center
 
-`
+// `
 
 
 

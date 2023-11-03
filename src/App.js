@@ -11,6 +11,7 @@ import  OneClickPost from './pages/OneClickPost'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SideBar from './components/SideBar'
 import ProductZone from './ProductZone';
+import LeftSideBar from './LeftSideBar';
 
 
 
@@ -20,7 +21,7 @@ const App = () => {
     <>
     <Navbar/>
     <ProductZone/>
-    {/* <Asidebar/> */}
+    <LeftSideBar/>
       <BrowserRouter>
       <SideBar>
         <Routes>
@@ -33,6 +34,7 @@ const App = () => {
           {/* <Route path="/Hire Influencar" element={<HireInfluencar />} /> */}
         </Routes>
       </SideBar>
+      
     </BrowserRouter>
     
   

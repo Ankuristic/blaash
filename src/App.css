@@ -16,6 +16,9 @@ main{
     height: 719px;
     width: 265px;
     transition: all 0.5s;
+    position:fixed;
+    top:80px;
+    overflow:auto;
 }
 .top_section{
     display: flex;

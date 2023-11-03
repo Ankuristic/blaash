@@ -6,25 +6,30 @@
     background-color: #27272F; /* Set the background color you want */
     color: #fff;
     padding: 10px 20px;
-    
-    height:67px
+    width:1400px;
+    height:67px;
+    position:fixed
   }
   
   .nav-logo img {
     height: 40px; /* Adjust the height as needed */
   }
   
-  .nav-links a {
+  .nav-links input {
     border: none;
     background-color: #27272F;
     color: #fff;
     padding: 5px;
     border-radius: 4px;
+    justify-content: space-between;
+   
   }
 
   .nav-links {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
   }
   
   /* .nav-links a:hover {

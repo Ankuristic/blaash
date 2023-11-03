@@ -1,36 +1,4 @@
-// import React from 'react'
-// import styled from  "styled-components"
 
-// const Nav = styled.div`
-// width: 100%;
-// height:70px;
-// background-color: black;
-// display:flex;
-// justify-content:space-between;
-
-// `
-
-// const Title =styled.div`
-// color:#ffffff
-// `
-
-// const Navbar = () => {
-//   return (
-//     <>
-//        <Nav>
-//         <Title> Design Studio</Title>
-//         <div> <input type ="search"/></div>
-//         <div> <input type ="search"/></div>
-//         <div> <input type ="search"/></div>
-//         <div> <input type ="search"/></div>
-        
-        
-//         </Nav>
-//     </>
-//   )
-// }
-
-// export default Navbar
 
 
 // Navbar.js
@@ -60,7 +28,7 @@ function Navbar() {
     <div className="navbar">
       <div className="nav-logo">
       <div className=''> Design Studio</div>
-        <img src="your-logo.png" alt="Logo" />
+        
       </div>
       <div className="nav-links">
       
